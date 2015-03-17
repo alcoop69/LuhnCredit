@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class CreditCard {
 
 	 public static void main(String[] args) {
-	     Scanner in = new Scanner(System.in);
+	     Scanner c = new Scanner(System.c);
 	        int count = 0;
 	        long array[] = new long [16];
 	       do
@@ -12,7 +12,7 @@ public class CreditCard {
 	        count = 0;
 	       array = new long [16];
 	        System.out.print("Enter your Credit Card Number : ");
-	        long number = in.nextLong();
+	        long number =c.nextLong();
 	        for (int i = 0; number != 0; i++) {
 	        array[i] = number % 10;
 	        number = number / 10;
@@ -32,7 +32,7 @@ public class CreditCard {
 	    }
 
 	    public static boolean isValid(long[] array) {
-	        int total = sumOfDoubleEvenPlace(array) + sumOfOddPlace(array);        
+	        int total = sumOfDEvenPlace(array) + sumOfOddPlace(array);        
 	        if ((total % 10 == 0)) {
 	         for (int i=0; i< array.length; i++){
 	            System.out.println(array[i]);}
@@ -54,9 +54,11 @@ public class CreditCard {
 	        }
 	    }
 
-	    public static int sumOfOddPlace(long[] array) {
+	    public static int sumOfOdddPlace(long[] array) {
 	        int result = 0;
 	        for (int i=0; i< array.length; i++)
+	        
+	        
 	        {
 	        while (array[i] > 0) {
 	            result += (int) (array[i] % 10);
